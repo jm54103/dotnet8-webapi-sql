@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\workspace\\dotnet8-webapi-sql\\wwwroot\\ErrorPages\\404.html",
+      "PackagePath": "staticwebassets\\ErrorPages\\404.html"
+    },
+    {
+      "Id": "D:\\workspace\\dotnet8-webapi-sql\\wwwroot\\ErrorPages\\500.html",
+      "PackagePath": "staticwebassets\\ErrorPages\\500.html"
+    },
+    {
+      "Id": "D:\\workspace\\dotnet8-webapi-sql\\wwwroot\\ErrorPages\\DefaultError.html",
+      "PackagePath": "staticwebassets\\ErrorPages\\DefaultError.html"
+    },
+    {
+      "Id": "D:\\workspace\\dotnet8-webapi-sql\\wwwroot\\ErrorPages\\index.html",
+      "PackagePath": "staticwebassets\\ErrorPages\\index.html"
+    },
+    {
+      "Id": "D:\\workspace\\dotnet8-webapi-sql\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\workspace\\dotnet8-webapi-sql\\wwwroot\\web.config",
+      "PackagePath": "staticwebassets\\web.config"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.dotnet8-webapi-sql.props",
+      "PackagePath": "build\\dotnet8-webapi-sql.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.dotnet8-webapi-sql.props",
+      "PackagePath": "buildMultiTargeting\\dotnet8-webapi-sql.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.dotnet8-webapi-sql.props",
+      "PackagePath": "buildTransitive\\dotnet8-webapi-sql.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.dotnet8-webapi-sql.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
