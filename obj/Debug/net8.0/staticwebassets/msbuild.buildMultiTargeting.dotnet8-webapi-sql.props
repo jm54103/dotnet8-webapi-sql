@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\dotnet8-webapi-sql.props" />
+</Project>

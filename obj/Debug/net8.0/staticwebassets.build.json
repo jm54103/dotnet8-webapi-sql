@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "6StsP52Ygu6j+Np8BQPxaPQBRn7jMmnGAYJtTIWXFj4=",
+  "Source": "dotnet8-webapi-sql",
+  "BasePath": "_content/dotnet8-webapi-sql",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
