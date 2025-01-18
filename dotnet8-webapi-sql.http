@@ -1,0 +1,6 @@
+@dotnet8_webapi_sql_HostAddress = http://localhost:5222
+
+GET {{dotnet8_webapi_sql_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
