@@ -1,6 +1,7 @@
 using System.Configuration;
 using System.Data;
 using System.Security.Claims;
+using DocumentFormat.OpenXml.Office2016.Drawing.Command;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -96,6 +97,51 @@ public class SQLConsoleController : AppControllerBase
         sqlConnection.Close();
         return Ok(columnNames);
     }  
+
+    [HttpGet("getDataTable")]
+    public ActionResult getDataTable(string DBConnectionName,string tableName){
+        DtoDataTable data = new DtoDataTable();
+        data.TableName=tableName;
+        string key=$"ConnectionStrings:{DBConnectionName}";
+        string? connectionString = this._configuration[key];
+        String[] tableRestrictions = new String[4];
+        tableRestrictions[2]=tableName;
+        SqlConnection sqlConnection = new SqlConnection(connectionString);
+        sqlConnection.Open();
+        DataTable IndexColumns = sqlConnection.GetSchema("IndexColumns",tableRestrictions);    
+        List<string> KeyColumnNames = new List<string>();
+        foreach(DataRow rowColumn in IndexColumns.Rows){
+            var constraint_name=Convert.ToString(rowColumn["constraint_name"])??"";            
+            if(constraint_name.Contains("PK")){
+                this._logger.LogDebug(constraint_name);
+                KeyColumnNames.Add((string)rowColumn["column_name"]);     
+            }
+        }   
+        SqlCommand command = new SqlCommand($"SELECT * FROM {tableName}", sqlConnection);
+        command.CommandType = CommandType.Text;
+        SqlDataReader sqlDataReader = command.ExecuteReader();   
+        var dataTable = new DataTable();
+        dataTable.Load(sqlDataReader);        
+        foreach(DataColumn dataColumn in dataTable.Columns)
+        {
+            DtoDataColumn column = new DtoDataColumn();            
+            column.ColumnName=dataColumn.ColumnName;
+            column.DataType=Convert.ToString(dataColumn.DataType)??"";
+            column.Maxlength=dataColumn.MaxLength;
+            column.Key=KeyColumnNames.Contains(column.ColumnName) ? "PK" : "";
+            data.dataColumns.Add(column);                                                              
+        }
+        foreach(DataRow dataRow in dataTable.Rows){
+            DtoDataRow row = new DtoDataRow();
+            foreach(var column in data.dataColumns){
+                string value=Convert.ToString(dataRow[column.ColumnName])??""; 
+                row.Values.Add(value);
+            }
+            data.dataRows.Add(row);                        
+        }       
+        sqlConnection.Close();
+        return Ok(data);
+    }
 
 
 }
