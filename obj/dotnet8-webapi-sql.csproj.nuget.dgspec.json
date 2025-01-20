@@ -10,11 +10,14 @@
         "projectUniqueName": "D:\\workspace\\dotnet8-webapi-sql\\dotnet8-webapi-sql.csproj",
         "projectName": "dotnet8-webapi-sql",
         "projectPath": "D:\\workspace\\dotnet8-webapi-sql\\dotnet8-webapi-sql.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\ASUS ROG\\.nuget\\packages\\",
         "outputPath": "D:\\workspace\\dotnet8-webapi-sql\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ASUS ROG\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

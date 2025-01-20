@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dotnet8-webapi-sql")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e1addce92821ee0f5dfc288e460e22cc9a1744d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eaefd44ae1e3109e092376e54a7a51cdf08fee28")]
 [assembly: System.Reflection.AssemblyProductAttribute("dotnet8-webapi-sql")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dotnet8-webapi-sql")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
